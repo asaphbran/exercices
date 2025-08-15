@@ -1,0 +1,30 @@
+version: '3.8'
+
+# Definición de los servicios de la aplicación
+services:
+  # Servicio para el servidor web Nginx
+  nginx:
+    # Usar el archivo Dockerfile para construir la imagen.
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Mapear el puerto 8080 del host al puerto 80 del contenedor Nginx.
+    ports:
+      - "8080:80"
+    # Montar el código de la aplicación desde el directorio actual
+    # al directorio de Nginx en el contenedor. Esto permite ver los cambios
+    # en el código sin reconstruir la imagen.
+    volumes:
+      - .:/var/www/html
+    # Depende del servicio 'php' para asegurar que el contenedor de PHP-FPM
+    # esté activo antes de iniciar Nginx.
+    depends_on:
+      - php
+
+  # Servicio para PHP-FPM, que procesa los scripts PHP
+  php:
+    # Usar la misma imagen base que el Dockerfile para consistencia.
+    image: php:8.3-fpm-alpine
+    # Montar el código de la aplicación.
+    volumes:
+      - .:/var/www/html
