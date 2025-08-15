@@ -12,9 +12,10 @@ Hay 2 formas de ejecutar el ejercicio:
 
 <h5>Con PHP instalado localmente</h5>
 
-Si tienes PHP instalado localmente en tu máquina, puedes ejecutar el proyecto de la siguiente manera:
+Si tienes PHP instalado localmente, puedes ejecutar el proyecto de la siguiente manera:
 
-<b>Nota: Si estás usando MAMP, WAMP o XAMPP, asegúrate de que el servidor PHP esté en ejecución. Si estás en una Mac y no tienes PHP instalado, puedes instalarlo fácilmente con Homebrew.</b>
+<b>Nota: Si estás utilizando MAMP, WAMP o XAMPP, asegúrate de que el servidor web incluido con soporte para PHP esté en ejecución.
+En macOS, si no tienes PHP instalado, puedes instalarlo fácilmente mediante Homebrew ejecutando <code>brew install php</code></b>
 
 Asegúrate de estar dentro de la carpeta del proyecto para ejecutar este comando:
 
