@@ -25,9 +25,6 @@ Asegúrate de estar dentro de la carpeta del proyecto para ejecutar este comando
 
 Si no quieres instalar WAMP, XAMPP o MAMP, puedes usar Docker para ejecutar el proyecto en un entorno aislado.
 
-<b>IMPORTANTE:</b> Si <code>docker-compose</code> no funciona, utiliza <code>docker compose</code>.
-Desde Docker 20.10, Compose está integrado en el CLI principal y el binario <code>docker-compose</code> clásico ya no se incluye.
-
 <ol>
 <li>Si no tienes Docker Desktop, descarga e instala la aplicación desde el sitio web oficial de Docker. Durante la instalación, asegúrate de habilitar la opción para usar WSL 2. Luego, ejecuta la aplicación.</li>
 
@@ -57,6 +54,9 @@ Para ejecutar el script directamente sin entrar al contenedor:
 <code>docker compose exec php php /var/www/html/exercise.php 3 10 true</code>
 </li>
 </ul>
+
+<b>IMPORTANTE:</b> Si <code>docker compose</code> no funciona, quiere decir que probablemente estés usando una versión antigua de Docker, en su defecto utiliza <code>docker-compose</code>.
+Desde Docker 20.10, Compose está integrado en el CLI principal y el binario <code>docker-compose</code> clásico ya no se incluye.
 
 <h3>2. Ejecutar desde el Navegador Web</h3>
 
